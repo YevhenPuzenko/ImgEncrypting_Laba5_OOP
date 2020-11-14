@@ -4,6 +4,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Laba5_OOP_imgEncrypting", "Laba5_OOP_imgEncrypting.vcxproj", "{4E88CF3F-B67B-4743-A60F-357ED45D612C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{55A5D3EA-9B34-4811-BA67-4BFF296C364C} = {55A5D3EA-9B34-4811-BA67-4BFF296C364C}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyString", "MyString\MyString.vcxproj", "{8A2FF76E-9C95-4D8A-A6D9-DBA63B85DAE4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyEncrypt", "MyEncrypt\MyEncrypt.vcxproj", "{55A5D3EA-9B34-4811-BA67-4BFF296C364C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8A2FF76E-9C95-4D8A-A6D9-DBA63B85DAE4} = {8A2FF76E-9C95-4D8A-A6D9-DBA63B85DAE4}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +31,22 @@ Global
 		{4E88CF3F-B67B-4743-A60F-357ED45D612C}.Release|x64.Build.0 = Release|x64
 		{4E88CF3F-B67B-4743-A60F-357ED45D612C}.Release|x86.ActiveCfg = Release|Win32
 		{4E88CF3F-B67B-4743-A60F-357ED45D612C}.Release|x86.Build.0 = Release|Win32
+		{8A2FF76E-9C95-4D8A-A6D9-DBA63B85DAE4}.Debug|x64.ActiveCfg = Debug|x64
+		{8A2FF76E-9C95-4D8A-A6D9-DBA63B85DAE4}.Debug|x64.Build.0 = Debug|x64
+		{8A2FF76E-9C95-4D8A-A6D9-DBA63B85DAE4}.Debug|x86.ActiveCfg = Debug|Win32
+		{8A2FF76E-9C95-4D8A-A6D9-DBA63B85DAE4}.Debug|x86.Build.0 = Debug|Win32
+		{8A2FF76E-9C95-4D8A-A6D9-DBA63B85DAE4}.Release|x64.ActiveCfg = Release|x64
+		{8A2FF76E-9C95-4D8A-A6D9-DBA63B85DAE4}.Release|x64.Build.0 = Release|x64
+		{8A2FF76E-9C95-4D8A-A6D9-DBA63B85DAE4}.Release|x86.ActiveCfg = Release|Win32
+		{8A2FF76E-9C95-4D8A-A6D9-DBA63B85DAE4}.Release|x86.Build.0 = Release|Win32
+		{55A5D3EA-9B34-4811-BA67-4BFF296C364C}.Debug|x64.ActiveCfg = Debug|x64
+		{55A5D3EA-9B34-4811-BA67-4BFF296C364C}.Debug|x64.Build.0 = Debug|x64
+		{55A5D3EA-9B34-4811-BA67-4BFF296C364C}.Debug|x86.ActiveCfg = Debug|Win32
+		{55A5D3EA-9B34-4811-BA67-4BFF296C364C}.Debug|x86.Build.0 = Debug|Win32
+		{55A5D3EA-9B34-4811-BA67-4BFF296C364C}.Release|x64.ActiveCfg = Release|x64
+		{55A5D3EA-9B34-4811-BA67-4BFF296C364C}.Release|x64.Build.0 = Release|x64
+		{55A5D3EA-9B34-4811-BA67-4BFF296C364C}.Release|x86.ActiveCfg = Release|Win32
+		{55A5D3EA-9B34-4811-BA67-4BFF296C364C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
