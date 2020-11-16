@@ -120,12 +120,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="MyEncrypt.cpp" />
+    <ClCompile Include="MyString.cpp" />
     <ClCompile Include="StartForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MyEncrypt.h" />
+    <ClInclude Include="MyString.h" />
     <ClInclude Include="StartForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="StartForm.resx">
+      <DependentUpon>StartForm.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
