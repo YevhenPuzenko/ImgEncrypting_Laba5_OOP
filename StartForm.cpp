@@ -1,4 +1,5 @@
 ﻿#include "StartForm.h"
+#include "EncryptForm.h"
 using namespace System;
 using namespace System::Windows::Forms;
 
@@ -13,5 +14,12 @@ void main() {
 
 System::Void Laba5OOPimgEncrypting::StartForm::EncryptButton_Click(System::Object^ sender, System::EventArgs^ e)
 {
-    return System::Void();
+    EncryptForm^ encr = gcnew EncryptForm();
+    encr->Show();
+    //this->Hide();
+}
+
+System::Void Laba5OOPimgEncrypting::StartForm::ExitButton_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    this->Close();
 }
