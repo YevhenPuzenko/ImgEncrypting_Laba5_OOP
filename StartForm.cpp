@@ -11,4 +11,7 @@ void main() {
     Application::Run(% form);
 }
 
-
+System::Void Laba5OOPimgEncrypting::StartForm::EncryptButton_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    return System::Void();
+}
