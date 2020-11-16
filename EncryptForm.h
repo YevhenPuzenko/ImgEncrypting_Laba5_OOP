@@ -110,6 +110,7 @@ namespace Laba5OOPimgEncrypting {
 			this->EncryptButton->TabIndex = 3;
 			this->EncryptButton->Text = L"Зашифровать";
 			this->EncryptButton->UseVisualStyleBackColor = true;
+			this->EncryptButton->Click += gcnew System::EventHandler(this, &EncryptForm::EncryptButton_Click);
 			// 
 			// ShowPicturePictureBox
 			// 
@@ -162,6 +163,8 @@ namespace Laba5OOPimgEncrypting {
 	private: System::Void CancellButton_Click(System::Object^ sender, System::EventArgs^ e);
 	
 private: System::Void KeyGenButton_Click(System::Object^ sender, System::EventArgs^ e);
+
+private: System::Void EncryptButton_Click(System::Object^ sender, System::EventArgs^ e);
 
 };
 }

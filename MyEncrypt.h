@@ -41,6 +41,9 @@ public:
 		System::Random^ random = gcnew System::Random();
 		this->setKey((random->Next()%100000000000)+"");
 	}
+	long long int KeyToInt() {
+		return atoi(key.getStr());
+	}
 
 	MyEncrypt() {
 		text = "";
