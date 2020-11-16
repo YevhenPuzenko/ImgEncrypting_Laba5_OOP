@@ -1,9 +1,11 @@
 ﻿#include "EncryptForm.h"
+#include "MyEncrypt.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
 
 [STAThread]
+
 void encrForm() {
     Application::EnableVisualStyles();
     Application::SetCompatibleTextRenderingDefault(false);
@@ -25,4 +27,11 @@ System::Void Laba5OOPimgEncrypting::EncryptForm::EnterPicture_Click(System::Obje
 System::Void Laba5OOPimgEncrypting::EncryptForm::CancellButton_Click(System::Object^ sender, System::EventArgs^ e)
 {
     this->Close();
+}
+
+System::Void Laba5OOPimgEncrypting::EncryptForm::KeyGenButton_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    MyEncrypt temp;
+    temp.keyGen();
+    KeyTextBox->Text = temp.getKey();
 }

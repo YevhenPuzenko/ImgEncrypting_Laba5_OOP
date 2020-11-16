@@ -38,9 +38,10 @@ namespace Laba5OOPimgEncrypting {
 	protected:
 
 	private: System::Windows::Forms::Button^ KeyGenButton;
+	private: System::Windows::Forms::TextBox^ KeyTextBox;
 	protected:
 
-	private: System::Windows::Forms::TextBox^ textBox1;
+
 	private: System::Windows::Forms::Button^ EncryptButton;
 
 
@@ -63,7 +64,7 @@ namespace Laba5OOPimgEncrypting {
 		{
 			this->EnterPictureButton = (gcnew System::Windows::Forms::Button());
 			this->KeyGenButton = (gcnew System::Windows::Forms::Button());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->KeyTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->EncryptButton = (gcnew System::Windows::Forms::Button());
 			this->ShowPicturePictureBox = (gcnew System::Windows::Forms::PictureBox());
 			this->TextRichTextBox = (gcnew System::Windows::Forms::RichTextBox());
@@ -89,16 +90,17 @@ namespace Laba5OOPimgEncrypting {
 			this->KeyGenButton->TabIndex = 1;
 			this->KeyGenButton->Text = L"Сгенерировать ключ случайно";
 			this->KeyGenButton->UseVisualStyleBackColor = true;
+			this->KeyGenButton->Click += gcnew System::EventHandler(this, &EncryptForm::KeyGenButton_Click);
 			// 
-			// textBox1
+			// KeyTextBox
 			// 
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->KeyTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->textBox1->Location = System::Drawing::Point(12, 12);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(358, 30);
-			this->textBox1->TabIndex = 2;
-			this->textBox1->Text = L"Введите свой ключ тут";
+			this->KeyTextBox->Location = System::Drawing::Point(12, 12);
+			this->KeyTextBox->Name = L"KeyTextBox";
+			this->KeyTextBox->Size = System::Drawing::Size(358, 30);
+			this->KeyTextBox->TabIndex = 2;
+			this->KeyTextBox->Text = L"Введите свой ключ тут";
 			// 
 			// EncryptButton
 			// 
@@ -144,7 +146,7 @@ namespace Laba5OOPimgEncrypting {
 			this->Controls->Add(this->ShowPicturePictureBox);
 			this->Controls->Add(this->CancellButton);
 			this->Controls->Add(this->EncryptButton);
-			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->KeyTextBox);
 			this->Controls->Add(this->KeyGenButton);
 			this->Controls->Add(this->EnterPictureButton);
 			this->Name = L"EncryptForm";
@@ -159,5 +161,7 @@ namespace Laba5OOPimgEncrypting {
 	
 	private: System::Void CancellButton_Click(System::Object^ sender, System::EventArgs^ e);
 	
+private: System::Void KeyGenButton_Click(System::Object^ sender, System::EventArgs^ e);
+
 };
 }

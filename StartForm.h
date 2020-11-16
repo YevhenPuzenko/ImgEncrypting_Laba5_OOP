@@ -106,6 +106,7 @@ namespace Laba5OOPimgEncrypting {
 			this->ExitButton->TabIndex = 3;
 			this->ExitButton->Text = L"Выйти";
 			this->ExitButton->UseVisualStyleBackColor = true;
+			this->ExitButton->Click += gcnew System::EventHandler(this, &StartForm::ExitButton_Click);
 			// 
 			// GitOpen
 			// 
@@ -140,5 +141,7 @@ namespace Laba5OOPimgEncrypting {
 	
 	private: System::Void EncryptButton_Click(System::Object^ sender, System::EventArgs^ e);
 	
+	private: System::Void ExitButton_Click(System::Object^ sender, System::EventArgs^ e);
+
 };
 }

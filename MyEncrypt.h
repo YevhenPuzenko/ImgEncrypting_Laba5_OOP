@@ -2,6 +2,7 @@
 #include"MyString.h"
 #include <vcclr.h>
 //#include <atlstr.h>
+using System::String;
 class MyEncrypt
 {
 private:
@@ -23,7 +24,6 @@ public:
 			int temp = text1[i];
 			text = text + (char)temp;
 		}
-
 	}
 	void setKey(System::String^ key1) {
 		for (size_t i = 0; i < key1->Length; i++)
@@ -31,11 +31,15 @@ public:
 			int temp = key1[i];
 			key = key + (char)temp;
 		}
-
 	}
 	MyEncrypt(MyString text, MyString key) {
 		this->text = text;
 		this->key = key;
+	}
+
+	void keyGen() {
+		System::Random^ random = gcnew System::Random();
+		this->setKey((random->Next()%100000000000)+"");
 	}
 
 	MyEncrypt() {
