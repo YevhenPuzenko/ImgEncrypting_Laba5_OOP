@@ -71,7 +71,10 @@ System::Void Laba5OOPimgEncrypting::EncryptForm::EncryptButton_Click(System::Obj
         //запись буквы в битовое представление цвета РГБ, 
         //для записи разбиваем байты символа на такие части R-3 G-2 B-3
         Color^ newColor;
-        newColor->R = 
+        newColor = thisColor;
+        EncryptButton->Text = "DONE";
+        int colorN = (newColor->R & 
+
 
     }
 
