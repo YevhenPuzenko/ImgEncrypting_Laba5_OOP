@@ -93,7 +93,9 @@ namespace Laba5OOPimgEncrypting {
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		MyEncrypt strg =  MyEncrypt();
 		strg.setText(label1->Text);
+		strg.setKey(button1->Text);
 		button1->Text = strg.getText();
+		label1->Text = strg.getKey();
 		//label1->Text = strg.getText();
 
 	}
