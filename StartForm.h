@@ -36,9 +36,15 @@ namespace Laba5OOPimgEncrypting {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^ button1;
-	protected:
 	private: System::Windows::Forms::Label^ label1;
+	protected:
+	private: System::Windows::Forms::Button^ EncryptButton;
+	private: System::Windows::Forms::Button^ DecryptButton;
+	private: System::Windows::Forms::Button^ ExitButton;
+	private: System::Windows::Forms::PictureBox^ GitOpen;
+
+	protected:
+
 
 	private:
 		/// <summary>
@@ -53,51 +59,83 @@ namespace Laba5OOPimgEncrypting {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(StartForm::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->EncryptButton = (gcnew System::Windows::Forms::Button());
+			this->DecryptButton = (gcnew System::Windows::Forms::Button());
+			this->ExitButton = (gcnew System::Windows::Forms::Button());
+			this->GitOpen = (gcnew System::Windows::Forms::PictureBox());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GitOpen))->BeginInit();
 			this->SuspendLayout();
-			// 
-			// button1
-			// 
-			this->button1->Location = System::Drawing::Point(165, 78);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
-			this->button1->TabIndex = 0;
-			this->button1->Text = L"button1";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &StartForm::button1_Click);
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(380, 65);
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 32, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label1->Location = System::Drawing::Point(58, 26);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(46, 17);
-			this->label1->TabIndex = 1;
-			this->label1->Text = L"label1";
+			this->label1->Size = System::Drawing::Size(872, 63);
+			this->label1->TabIndex = 0;
+			this->label1->Text = L"Зашифруй свой текст в картинку!";
+			// 
+			// EncryptButton
+			// 
+			this->EncryptButton->Location = System::Drawing::Point(267, 203);
+			this->EncryptButton->Name = L"EncryptButton";
+			this->EncryptButton->Size = System::Drawing::Size(410, 70);
+			this->EncryptButton->TabIndex = 1;
+			this->EncryptButton->Text = L"Зашифровать";
+			this->EncryptButton->UseVisualStyleBackColor = true;
+			// 
+			// DecryptButton
+			// 
+			this->DecryptButton->Location = System::Drawing::Point(267, 293);
+			this->DecryptButton->Name = L"DecryptButton";
+			this->DecryptButton->Size = System::Drawing::Size(410, 70);
+			this->DecryptButton->TabIndex = 2;
+			this->DecryptButton->Text = L"Розшифровать ";
+			this->DecryptButton->UseVisualStyleBackColor = true;
+			// 
+			// ExitButton
+			// 
+			this->ExitButton->Location = System::Drawing::Point(267, 384);
+			this->ExitButton->Name = L"ExitButton";
+			this->ExitButton->Size = System::Drawing::Size(410, 70);
+			this->ExitButton->TabIndex = 3;
+			this->ExitButton->Text = L"Выйти";
+			this->ExitButton->UseVisualStyleBackColor = true;
+			// 
+			// GitOpen
+			// 
+			this->GitOpen->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"GitOpen.Image")));
+			this->GitOpen->Location = System::Drawing::Point(683, 385);
+			this->GitOpen->Name = L"GitOpen";
+			this->GitOpen->Size = System::Drawing::Size(69, 69);
+			this->GitOpen->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->GitOpen->TabIndex = 4;
+			this->GitOpen->TabStop = false;
 			// 
 			// StartForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1032, 627);
+			this->ClientSize = System::Drawing::Size(1032, 639);
+			this->Controls->Add(this->GitOpen);
+			this->Controls->Add(this->ExitButton);
+			this->Controls->Add(this->DecryptButton);
+			this->Controls->Add(this->EncryptButton);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->button1);
 			this->Name = L"StartForm";
-			this->Text = L"StartForm";
+			this->Text = L"ImgEncrypting";
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GitOpen))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		MyEncrypt strg =  MyEncrypt();
-		strg.setText(label1->Text);
-		strg.setKey(button1->Text);
-		button1->Text = strg.getText();
-		label1->Text = strg.getKey();
-		//label1->Text = strg.getText();
+	
 
-	}
+	
 	};
 }
