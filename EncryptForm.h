@@ -49,6 +49,8 @@ namespace Laba5OOPimgEncrypting {
 	private: System::Windows::Forms::RichTextBox^ TextRichTextBox;
 	private: System::Windows::Forms::Button^ CancellButton;
 
+	private: System::Windows::Forms::Label^ ImagePathLabel;
+
 	private:
 		/// <summary>
 		/// Required designer variable.
@@ -69,6 +71,7 @@ namespace Laba5OOPimgEncrypting {
 			this->ShowPicturePictureBox = (gcnew System::Windows::Forms::PictureBox());
 			this->TextRichTextBox = (gcnew System::Windows::Forms::RichTextBox());
 			this->CancellButton = (gcnew System::Windows::Forms::Button());
+			this->ImagePathLabel = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ShowPicturePictureBox))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -114,15 +117,16 @@ namespace Laba5OOPimgEncrypting {
 			// 
 			// ShowPicturePictureBox
 			// 
-			this->ShowPicturePictureBox->Location = System::Drawing::Point(14, 187);
+			this->ShowPicturePictureBox->Location = System::Drawing::Point(12, 208);
 			this->ShowPicturePictureBox->Name = L"ShowPicturePictureBox";
-			this->ShowPicturePictureBox->Size = System::Drawing::Size(354, 389);
+			this->ShowPicturePictureBox->Size = System::Drawing::Size(358, 366);
+			this->ShowPicturePictureBox->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->ShowPicturePictureBox->TabIndex = 5;
 			this->ShowPicturePictureBox->TabStop = false;
 			// 
 			// TextRichTextBox
 			// 
-			this->TextRichTextBox->Location = System::Drawing::Point(377, 13);
+			this->TextRichTextBox->Location = System::Drawing::Point(376, 12);
 			this->TextRichTextBox->Name = L"TextRichTextBox";
 			this->TextRichTextBox->Size = System::Drawing::Size(434, 562);
 			this->TextRichTextBox->TabIndex = 6;
@@ -138,11 +142,22 @@ namespace Laba5OOPimgEncrypting {
 			this->CancellButton->UseVisualStyleBackColor = true;
 			this->CancellButton->Click += gcnew System::EventHandler(this, &EncryptForm::CancellButton_Click);
 			// 
+			// ImagePathLabel
+			// 
+			this->ImagePathLabel->AutoSize = true;
+			this->ImagePathLabel->Location = System::Drawing::Point(176, 181);
+			this->ImagePathLabel->Name = L"ImagePathLabel";
+			this->ImagePathLabel->Size = System::Drawing::Size(46, 17);
+			this->ImagePathLabel->TabIndex = 8;
+			this->ImagePathLabel->Text = L"label1";
+			this->ImagePathLabel->Visible = false;
+			// 
 			// EncryptForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(819, 589);
+			this->ClientSize = System::Drawing::Size(817, 582);
+			this->Controls->Add(this->ImagePathLabel);
 			this->Controls->Add(this->TextRichTextBox);
 			this->Controls->Add(this->ShowPicturePictureBox);
 			this->Controls->Add(this->CancellButton);
@@ -165,6 +180,8 @@ namespace Laba5OOPimgEncrypting {
 private: System::Void KeyGenButton_Click(System::Object^ sender, System::EventArgs^ e);
 
 private: System::Void EncryptButton_Click(System::Object^ sender, System::EventArgs^ e);
+
+
 
 };
 }
