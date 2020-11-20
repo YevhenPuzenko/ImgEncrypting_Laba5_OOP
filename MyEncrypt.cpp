@@ -7,6 +7,10 @@ MyEncrypt::MyEncrypt()
 	key = "";
 }
 
+
+
+
+
 MyEncrypt::MyEncrypt(MyString text, MyString key)
 {
 	this->text = text;
@@ -31,7 +35,6 @@ void MyEncrypt::setText(System::String^ str)
 		int temp = str[i];
 		text = text + (char)temp;
 	}
-
 }
 
 void MyEncrypt::setKey(System::String^ str)
@@ -41,6 +44,13 @@ void MyEncrypt::setKey(System::String^ str)
 		int temp = str[i];
 		key = key + (char)temp;
 	}
+}
+
+
+
+int MyEncrypt::TextLength()
+{
+	return text.getLenght();
 }
 
 void MyEncrypt::keyGen()
