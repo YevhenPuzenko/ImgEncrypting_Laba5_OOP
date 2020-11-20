@@ -117,6 +117,7 @@ namespace Laba5OOPimgEncrypting {
 			this->GitOpen->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->GitOpen->TabIndex = 4;
 			this->GitOpen->TabStop = false;
+			this->GitOpen->Click += gcnew System::EventHandler(this, &StartForm::GitOpen_Click);
 			// 
 			// StartForm
 			// 
@@ -142,6 +143,8 @@ namespace Laba5OOPimgEncrypting {
 	private: System::Void EncryptButton_Click(System::Object^ sender, System::EventArgs^ e);
 	
 	private: System::Void ExitButton_Click(System::Object^ sender, System::EventArgs^ e);
+
+private: System::Void GitOpen_Click(System::Object^ sender, System::EventArgs^ e);
 
 };
 }

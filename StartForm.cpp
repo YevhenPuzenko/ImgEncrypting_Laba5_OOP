@@ -23,3 +23,8 @@ System::Void Laba5OOPimgEncrypting::StartForm::ExitButton_Click(System::Object^ 
 {
     this->Close();
 }
+
+System::Void Laba5OOPimgEncrypting::StartForm::GitOpen_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    System::Diagnostics::Process::Start("https://github.com/YevhenPuzenko/ImgEncrypting_Laba5_OOP");
+}

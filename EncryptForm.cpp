@@ -107,6 +107,13 @@ System::Void Laba5OOPimgEncrypting::EncryptForm::EncryptButton_Click(System::Obj
 
 }
 
+System::Void Laba5OOPimgEncrypting::EncryptForm::KeyTextBox_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e)
+{
+    if (KeyTextBox->Text == "Введите свой ключ тут") KeyTextBox->Text = "";
+}
+
+
+
 
 
 

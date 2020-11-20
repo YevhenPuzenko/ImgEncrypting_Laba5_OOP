@@ -104,6 +104,7 @@ namespace Laba5OOPimgEncrypting {
 			this->KeyTextBox->Size = System::Drawing::Size(358, 30);
 			this->KeyTextBox->TabIndex = 2;
 			this->KeyTextBox->Text = L"Введите свой ключ тут";
+			this->KeyTextBox->MouseClick += gcnew System::Windows::Forms::MouseEventHandler(this, &EncryptForm::KeyTextBox_MouseClick);
 			// 
 			// EncryptButton
 			// 
@@ -183,6 +184,10 @@ private: System::Void EncryptButton_Click(System::Object^ sender, System::EventA
 
 
 
+
+
+
+private: System::Void KeyTextBox_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e);
 
 };
 }
