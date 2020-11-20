@@ -6,11 +6,11 @@ using System::String;
 class MyEncrypt
 {
 private:
+
 	MyString text;
 	MyString key;
 public:
 	MyEncrypt();
-	
 	MyEncrypt(MyString text, MyString key);
 		
 

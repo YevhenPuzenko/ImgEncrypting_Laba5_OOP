@@ -39,9 +39,11 @@ System::Void Laba5OOPimgEncrypting::EncryptForm::KeyGenButton_Click(System::Obje
     temp.keyGen();
     KeyTextBox->Text = temp.getKey();
 }
+
 struct Points {
     int x, y;
 };
+
 System::Void Laba5OOPimgEncrypting::EncryptForm::EncryptButton_Click(System::Object^ sender, System::EventArgs^ e)
 {
     ShowPicturePictureBox->Image = Image::FromFile(ImagePathLabel->Text);//костыль что бы заново открыть картинку 
@@ -90,13 +92,14 @@ System::Void Laba5OOPimgEncrypting::EncryptForm::EncryptButton_Click(System::Obj
         savePicture->OverwritePrompt = true;   
         savePicture->CheckPathExists = true;
         savePicture->Filter = "BMP(*.BMP)|*.BMP";
-
+        savePicture->FileName = "enc - ";
         if (savePicture->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
             
             Bitmap^ bSave = ((Bitmap^)ShowPicturePictureBox->Image);
                bSave->Save(savePicture->FileName,System::Drawing::Imaging::ImageFormat::Bmp);
+               
         }
-
+        
     }
     
         
