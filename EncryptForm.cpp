@@ -87,15 +87,14 @@ System::Void Laba5OOPimgEncrypting::EncryptForm::EncryptButton_Click(System::Obj
         //save new picture
         SaveFileDialog^ savePicture = gcnew SaveFileDialog();
         savePicture->Title = "Save as...";
-        savePicture->OverwritePrompt = true;     
+        savePicture->OverwritePrompt = true;   
         savePicture->CheckPathExists = true;
         savePicture->Filter = "BMP(*.BMP)|*.BMP";
+
         if (savePicture->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
-            //savePicture->FileName += " - encrypted";
+            
             Bitmap^ bSave = ((Bitmap^)ShowPicturePictureBox->Image);
                bSave->Save(savePicture->FileName,System::Drawing::Imaging::ImageFormat::Bmp);
-               //bSave->Save()
-
         }
 
     }
