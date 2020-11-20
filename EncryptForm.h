@@ -81,7 +81,7 @@ namespace Laba5OOPimgEncrypting {
 			this->EnterPictureButton->Name = L"EnterPictureButton";
 			this->EnterPictureButton->Size = System::Drawing::Size(176, 58);
 			this->EnterPictureButton->TabIndex = 0;
-			this->EnterPictureButton->Text = L"Выбрать картинку";
+			this->EnterPictureButton->Text = L"Enter picture";
 			this->EnterPictureButton->UseVisualStyleBackColor = true;
 			this->EnterPictureButton->Click += gcnew System::EventHandler(this, &EncryptForm::EnterPicture_Click);
 			// 
@@ -91,7 +91,7 @@ namespace Laba5OOPimgEncrypting {
 			this->KeyGenButton->Name = L"KeyGenButton";
 			this->KeyGenButton->Size = System::Drawing::Size(176, 58);
 			this->KeyGenButton->TabIndex = 1;
-			this->KeyGenButton->Text = L"Сгенерировать ключ случайно";
+			this->KeyGenButton->Text = L"Generate random key";
 			this->KeyGenButton->UseVisualStyleBackColor = true;
 			this->KeyGenButton->Click += gcnew System::EventHandler(this, &EncryptForm::KeyGenButton_Click);
 			// 
@@ -103,7 +103,7 @@ namespace Laba5OOPimgEncrypting {
 			this->KeyTextBox->Name = L"KeyTextBox";
 			this->KeyTextBox->Size = System::Drawing::Size(358, 30);
 			this->KeyTextBox->TabIndex = 2;
-			this->KeyTextBox->Text = L"Введите свой ключ тут";
+			this->KeyTextBox->Text = L"Input your key here";
 			this->KeyTextBox->MouseClick += gcnew System::Windows::Forms::MouseEventHandler(this, &EncryptForm::KeyTextBox_MouseClick);
 			// 
 			// EncryptButton
@@ -112,7 +112,7 @@ namespace Laba5OOPimgEncrypting {
 			this->EncryptButton->Name = L"EncryptButton";
 			this->EncryptButton->Size = System::Drawing::Size(176, 58);
 			this->EncryptButton->TabIndex = 3;
-			this->EncryptButton->Text = L"Зашифровать";
+			this->EncryptButton->Text = L"Encrypt";
 			this->EncryptButton->UseVisualStyleBackColor = true;
 			this->EncryptButton->Click += gcnew System::EventHandler(this, &EncryptForm::EncryptButton_Click);
 			// 
@@ -139,7 +139,7 @@ namespace Laba5OOPimgEncrypting {
 			this->CancellButton->Name = L"CancellButton";
 			this->CancellButton->Size = System::Drawing::Size(173, 57);
 			this->CancellButton->TabIndex = 4;
-			this->CancellButton->Text = L"Отмена";
+			this->CancellButton->Text = L"Cancell";
 			this->CancellButton->UseVisualStyleBackColor = true;
 			this->CancellButton->Click += gcnew System::EventHandler(this, &EncryptForm::CancellButton_Click);
 			// 

@@ -97,6 +97,7 @@ namespace Laba5OOPimgEncrypting {
 			this->DecryptButton->TabIndex = 2;
 			this->DecryptButton->Text = L"Decrypt";
 			this->DecryptButton->UseVisualStyleBackColor = true;
+			this->DecryptButton->Click += gcnew System::EventHandler(this, &StartForm::DecryptButton_Click);
 			// 
 			// ExitButton
 			// 
@@ -145,6 +146,8 @@ namespace Laba5OOPimgEncrypting {
 	private: System::Void ExitButton_Click(System::Object^ sender, System::EventArgs^ e);
 
 private: System::Void GitOpen_Click(System::Object^ sender, System::EventArgs^ e);
+
+private: System::Void DecryptButton_Click(System::Object^ sender, System::EventArgs^ e);
 
 };
 }

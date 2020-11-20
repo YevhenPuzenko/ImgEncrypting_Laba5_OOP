@@ -34,6 +34,14 @@ namespace Laba5OOPimgEncrypting {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::Label^ ImagePathLabel;
+	protected:
+	private: System::Windows::Forms::RichTextBox^ TextRichTextBox;
+	private: System::Windows::Forms::PictureBox^ ShowPicturePictureBox;
+	private: System::Windows::Forms::Button^ CancellButton;
+	private: System::Windows::Forms::Button^ EncryptButton;
+	private: System::Windows::Forms::TextBox^ KeyTextBox;
+	private: System::Windows::Forms::Button^ EnterPictureButton;
 
 	private:
 		/// <summary>
@@ -48,12 +56,108 @@ namespace Laba5OOPimgEncrypting {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(300,300);
-			this->Text = L"DecryptForm";
-			this->Padding = System::Windows::Forms::Padding(0);
+			this->ImagePathLabel = (gcnew System::Windows::Forms::Label());
+			this->TextRichTextBox = (gcnew System::Windows::Forms::RichTextBox());
+			this->ShowPicturePictureBox = (gcnew System::Windows::Forms::PictureBox());
+			this->CancellButton = (gcnew System::Windows::Forms::Button());
+			this->EncryptButton = (gcnew System::Windows::Forms::Button());
+			this->KeyTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->EnterPictureButton = (gcnew System::Windows::Forms::Button());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ShowPicturePictureBox))->BeginInit();
+			this->SuspendLayout();
+			// 
+			// ImagePathLabel
+			// 
+			this->ImagePathLabel->AutoSize = true;
+			this->ImagePathLabel->Location = System::Drawing::Point(165, 173);
+			this->ImagePathLabel->Name = L"ImagePathLabel";
+			this->ImagePathLabel->Size = System::Drawing::Size(46, 17);
+			this->ImagePathLabel->TabIndex = 16;
+			this->ImagePathLabel->Text = L"label1";
+			this->ImagePathLabel->Visible = false;
+			// 
+			// TextRichTextBox
+			// 
+			this->TextRichTextBox->Location = System::Drawing::Point(365, 4);
+			this->TextRichTextBox->Name = L"TextRichTextBox";
+			this->TextRichTextBox->Size = System::Drawing::Size(434, 562);
+			this->TextRichTextBox->TabIndex = 15;
+			this->TextRichTextBox->Text = L"";
+			// 
+			// ShowPicturePictureBox
+			// 
+			this->ShowPicturePictureBox->Location = System::Drawing::Point(1, 200);
+			this->ShowPicturePictureBox->Name = L"ShowPicturePictureBox";
+			this->ShowPicturePictureBox->Size = System::Drawing::Size(358, 366);
+			this->ShowPicturePictureBox->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->ShowPicturePictureBox->TabIndex = 14;
+			this->ShowPicturePictureBox->TabStop = false;
+			// 
+			// CancellButton
+			// 
+			this->CancellButton->Location = System::Drawing::Point(185, 112);
+			this->CancellButton->Name = L"CancellButton";
+			this->CancellButton->Size = System::Drawing::Size(173, 57);
+			this->CancellButton->TabIndex = 13;
+			this->CancellButton->Text = L"Cancell";
+			this->CancellButton->UseVisualStyleBackColor = true;
+			this->CancellButton->Click += gcnew System::EventHandler(this, &DecryptForm::CancellButton_Click);
+			// 
+			// EncryptButton
+			// 
+			this->EncryptButton->Location = System::Drawing::Point(1, 112);
+			this->EncryptButton->Name = L"EncryptButton";
+			this->EncryptButton->Size = System::Drawing::Size(176, 58);
+			this->EncryptButton->TabIndex = 12;
+			this->EncryptButton->Text = L"Decrypt";
+			this->EncryptButton->UseVisualStyleBackColor = true;
+			this->EncryptButton->Click += gcnew System::EventHandler(this, &DecryptForm::EncryptButton_Click);
+			// 
+			// KeyTextBox
+			// 
+			this->KeyTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->KeyTextBox->Location = System::Drawing::Point(1, 4);
+			this->KeyTextBox->Name = L"KeyTextBox";
+			this->KeyTextBox->Size = System::Drawing::Size(358, 30);
+			this->KeyTextBox->TabIndex = 11;
+			this->KeyTextBox->Text = L"Input your key here";
+			// 
+			// EnterPictureButton
+			// 
+			this->EnterPictureButton->Location = System::Drawing::Point(183, 48);
+			this->EnterPictureButton->Name = L"EnterPictureButton";
+			this->EnterPictureButton->Size = System::Drawing::Size(176, 58);
+			this->EnterPictureButton->TabIndex = 9;
+			this->EnterPictureButton->Text = L"Enter picture";
+			this->EnterPictureButton->UseVisualStyleBackColor = true;
+			this->EnterPictureButton->Click += gcnew System::EventHandler(this, &DecryptForm::EnterPictureButton_Click);
+			// 
+			// DecryptForm
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->ClientSize = System::Drawing::Size(809, 575);
+			this->Controls->Add(this->ImagePathLabel);
+			this->Controls->Add(this->TextRichTextBox);
+			this->Controls->Add(this->ShowPicturePictureBox);
+			this->Controls->Add(this->CancellButton);
+			this->Controls->Add(this->EncryptButton);
+			this->Controls->Add(this->KeyTextBox);
+			this->Controls->Add(this->EnterPictureButton);
+			this->Name = L"DecryptForm";
+			this->Text = L"DecryptForm";
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ShowPicturePictureBox))->EndInit();
+			this->ResumeLayout(false);
+			this->PerformLayout();
+
 		}
 #pragma endregion
-	};
+	private: System::Void EnterPictureButton_Click(System::Object^ sender, System::EventArgs^ e);
+	
+private: System::Void CancellButton_Click(System::Object^ sender, System::EventArgs^ e);
+
+private: System::Void EncryptButton_Click(System::Object^ sender, System::EventArgs^ e);
+
+};
 }

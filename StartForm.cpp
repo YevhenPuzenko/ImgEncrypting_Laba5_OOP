@@ -1,5 +1,6 @@
 ﻿#include "StartForm.h"
 #include "EncryptForm.h"
+#include "DecryptForm.h"
 using namespace System;
 using namespace System::Windows::Forms;
 
@@ -27,4 +28,10 @@ System::Void Laba5OOPimgEncrypting::StartForm::ExitButton_Click(System::Object^ 
 System::Void Laba5OOPimgEncrypting::StartForm::GitOpen_Click(System::Object^ sender, System::EventArgs^ e)
 {
     System::Diagnostics::Process::Start("https://github.com/YevhenPuzenko/ImgEncrypting_Laba5_OOP");
+}
+
+System::Void Laba5OOPimgEncrypting::StartForm::DecryptButton_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    DecryptForm^ decr = gcnew DecryptForm();
+    decr->Show();
 }

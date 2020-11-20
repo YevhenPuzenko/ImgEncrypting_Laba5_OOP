@@ -140,6 +140,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DecryptForm.resx">
+      <DependentUpon>DecryptForm.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EncryptForm.resx">
       <DependentUpon>EncryptForm.h</DependentUpon>
     </EmbeddedResource>
