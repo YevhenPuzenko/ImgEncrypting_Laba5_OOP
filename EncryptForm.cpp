@@ -55,6 +55,18 @@ System::Void Laba5OOPimgEncrypting::EncryptForm::EncryptButton_Click(System::Obj
     if (ValidSizeToText(encr, ShowPicturePictureBox->Image->Width, ShowPicturePictureBox->Image->Height)) {
         //for(i<text.size)
         Points* busyPosPixels = new Points[encr.TextLength() + 1];
+
+        //note text size in first pixel picture
+        int xPos = randomValGen->Next(0, ShowPicturePictureBox->Image->Width);
+        int yPos = randomValGen->Next(0, ShowPicturePictureBox->Image->Height);
+        Color thisPixel = ((Bitmap^)ShowPicturePictureBox->Image)->GetPixel(xPos, yPos);
+        int len = encr.getText()->Length;
+        unsigned char newR = (thisPixel.R & 0b11111000) | (len >> 5 & 0b111);
+        unsigned char newG = ((thisPixel.G >> 2) << 2) | (len >> 3 & 0b11);
+        unsigned char newB = ((thisPixel.B >> 3) << 3) | (len & 0b111);
+        
+        ((Bitmap^)ShowPicturePictureBox->Image)->SetPixel(xPos, yPos, Color::FromArgb(newR, newG, newB));
+
         for (size_t i = 0; i < encr.getText()->Length; i++)
         {
 
@@ -80,9 +92,11 @@ System::Void Laba5OOPimgEncrypting::EncryptForm::EncryptButton_Click(System::Obj
             //new byte = newR = rrrrrsss newG = ggggggss newB = bbbbbsss
             Color thisPixel = ((Bitmap^)ShowPicturePictureBox->Image)->GetPixel(xPos, yPos);
 
-            unsigned char newR = ((thisPixel.R >> 3) << 3) | ((encr.getText()[i] >> 5) & 0b111);
-            unsigned char newG = ((thisPixel.G >> 2) << 2) | ((encr.getText()[i] >> 3) & 0b11);
-            unsigned char newB = ((thisPixel.B >> 3) << 3) | (encr.getText()[i] & 0b111);
+            char c = encr.getText()[i];
+
+            unsigned char newR = (thisPixel.R & 0b11111000) | (c >> 5 & 0b111);
+            unsigned char newG = ((thisPixel.G >> 2) << 2) | (c >> 3 & 0b11);
+            unsigned char newB = ((thisPixel.B >> 3) << 3) | (c & 0b111);
 
             ((Bitmap^)ShowPicturePictureBox->Image)->SetPixel(xPos, yPos, Color::FromArgb(newR, newG, newB));
         }

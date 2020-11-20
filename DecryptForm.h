@@ -105,7 +105,7 @@ namespace Laba5OOPimgEncrypting {
 			// 
 			// EncryptButton
 			// 
-			this->EncryptButton->Location = System::Drawing::Point(1, 112);
+			this->EncryptButton->Location = System::Drawing::Point(1, 48);
 			this->EncryptButton->Name = L"EncryptButton";
 			this->EncryptButton->Size = System::Drawing::Size(176, 58);
 			this->EncryptButton->TabIndex = 12;
