@@ -120,12 +120,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DecryptForm.cpp" />
     <ClCompile Include="EncryptForm.cpp" />
     <ClCompile Include="MyEncrypt.cpp" />
     <ClCompile Include="MyString.cpp" />
     <ClCompile Include="StartForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DecryptForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="EncryptForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>

@@ -71,13 +71,13 @@ namespace Laba5OOPimgEncrypting {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 32, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->label1->Location = System::Drawing::Point(58, 26);
+			this->label1->Font = (gcnew System::Drawing::Font(L"Ravie", 48, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(77, 40);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(872, 63);
+			this->label1->Size = System::Drawing::Size(810, 107);
 			this->label1->TabIndex = 0;
-			this->label1->Text = L"Зашифруй свой текст в картинку!";
+			this->label1->Text = L"Magic picture";
 			// 
 			// EncryptButton
 			// 
@@ -85,7 +85,7 @@ namespace Laba5OOPimgEncrypting {
 			this->EncryptButton->Name = L"EncryptButton";
 			this->EncryptButton->Size = System::Drawing::Size(410, 70);
 			this->EncryptButton->TabIndex = 1;
-			this->EncryptButton->Text = L"Зашифровать";
+			this->EncryptButton->Text = L"Encrypt";
 			this->EncryptButton->UseVisualStyleBackColor = true;
 			this->EncryptButton->Click += gcnew System::EventHandler(this, &StartForm::EncryptButton_Click);
 			// 
@@ -95,7 +95,7 @@ namespace Laba5OOPimgEncrypting {
 			this->DecryptButton->Name = L"DecryptButton";
 			this->DecryptButton->Size = System::Drawing::Size(410, 70);
 			this->DecryptButton->TabIndex = 2;
-			this->DecryptButton->Text = L"Розшифровать ";
+			this->DecryptButton->Text = L"Decrypt";
 			this->DecryptButton->UseVisualStyleBackColor = true;
 			// 
 			// ExitButton
@@ -104,7 +104,7 @@ namespace Laba5OOPimgEncrypting {
 			this->ExitButton->Name = L"ExitButton";
 			this->ExitButton->Size = System::Drawing::Size(410, 70);
 			this->ExitButton->TabIndex = 3;
-			this->ExitButton->Text = L"Выйти";
+			this->ExitButton->Text = L"Exit";
 			this->ExitButton->UseVisualStyleBackColor = true;
 			this->ExitButton->Click += gcnew System::EventHandler(this, &StartForm::ExitButton_Click);
 			// 

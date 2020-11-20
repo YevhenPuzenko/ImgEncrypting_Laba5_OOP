@@ -97,7 +97,7 @@ System::Void Laba5OOPimgEncrypting::EncryptForm::EncryptButton_Click(System::Obj
             
             Bitmap^ bSave = ((Bitmap^)ShowPicturePictureBox->Image);
                bSave->Save(savePicture->FileName,System::Drawing::Imaging::ImageFormat::Bmp);
-               
+               this->Close();
         }
         
     }

@@ -183,5 +183,6 @@ private: System::Void EncryptButton_Click(System::Object^ sender, System::EventA
 
 
 
+
 };
 }
