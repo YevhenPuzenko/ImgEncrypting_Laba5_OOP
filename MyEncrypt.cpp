@@ -63,3 +63,8 @@ long long int MyEncrypt::KeyToInt()
 {
 	return atoi(key.getStr());
 }
+
+bool ValidSizeToText(MyEncrypt str, int width, int height)
+{
+	return str.getText()->Length+1 < width * height ? true : false;
+}

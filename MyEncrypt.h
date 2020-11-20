@@ -22,6 +22,7 @@ public:
 	int TextLength();
 	void keyGen();
 	long long int KeyToInt();
+	friend bool ValidSizeToText(MyEncrypt str, int width, int height);
 	
 };
 
